@@ -25,10 +25,8 @@
 
         <input type="submit" value="submit">
     </form>
-</body>
-</html>
 
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
+    if ($_SERVER["REQUEST_METHOD"] == "POST"){
     $selectedBuah = $_POST['Buah'];
 
     if (insert($_POST['warna'])){
@@ -49,3 +47,5 @@ if (!empty($selectedWarna)){
 }
 
 echo "Jenis kelamin anda: " . $selectJenisKelamin;
+</body>
+</html>

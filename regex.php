@@ -21,7 +21,7 @@ $text = '<br> I like apple pie.';
 $new_text = preg_replace($pattern, $replacement, $text);
 echo $new_text;
 
-$pattern = '/go?d/';
+$pattern = '/go{1,2}d/';
 $text = 'god is good';
 if (preg_match($pattern, $text, $matches)){
     echo "<br> Cocokkan: " . $matches[0];
