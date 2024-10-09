@@ -9,14 +9,18 @@
     <form id="myForm" method="post" action="proses_validasi.php">
         <label for="nama">Nama: </label>
         <input type="text" id="nama" name="nama">
+        <span id="nama-error" style="color: red;"></span><br>
+        
         <br>
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email"> 
+        <input type="email" id="email" name="email">
+        <span id="email-error" style="color: red;"></span><br> 
         <br>
-
+        
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password"> 
+        <input type="password" id="password" name="password">
+        <span id="password-error" style="color: red;"></span><br> 
         <br>
 
         <input type="submit" value="Submit">
@@ -33,7 +37,7 @@ $(document).ready(function() {
         var valid = true;
 
         // Validasi Nama
-        if (nama === "") {
+        if (nama == "") {
             $("#nama-error").text("Nama harus diisi.");
             valid = false;
         } else {
