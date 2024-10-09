@@ -23,29 +23,11 @@
 
         <br>
 
+        <label>Pilih Jenis Kelamin:</label><br>
+        <input type="radio" name="jenis_kelamin" value="laki-laki">Laki-Laki<br>
+        <input type="radio" name="jenis_kelamin" value="perempuan">Perempuan<br>
+
         <input type="submit" value="submit">
     </form>
-
-    if ($_SERVER["REQUEST_METHOD"] == "POST"){
-    $selectedBuah = $_POST['Buah'];
-
-    if (insert($_POST['warna'])){
-        $selectedWarna = $_POST['warna'];
-    } else {
-        $selectedWarna = [];
-    }
-} 
-
-$selectJenisKelamin = $_POST['jenis_kelamin'];
-
-echo "Anda memilih buah: " . $selectedBuah . "<br>";
-
-if (!empty($selectedWarna)){
-    echo "Warna Favorit Anda: " . implode(", ", $selectedWarna). "<br>";
-} else {
-    echp "Anda tidak memilih warna Favorit. <br>";
-}
-
-echo "Jenis kelamin anda: " . $selectJenisKelamin;
 </body>
 </html>
